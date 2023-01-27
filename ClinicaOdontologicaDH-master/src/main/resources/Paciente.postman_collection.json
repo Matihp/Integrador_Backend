@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "0ea95fab-9404-43cc-9028-fb768f105f2b",
+		"name": "Paciente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23357079"
+	},
+	"item": [
+		{
+			"name": "Guardar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJocnl1dHJ1QGVtYWlsLmNvbSIsImV4cCI6MTY3MDc5Mjk5MiwiaWF0IjoxNjcwNzkyMDkyfQ.NVU090O6Kg6TGnyulAXlurF9AORKsy7s3Bqygv4g0WU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombre\":\"Valentin\",\r\n\"apellido\":\"Suarez\",\r\n\"dni\":11111,\r\n\"domicilio\":{\"calle\":\"cal\",     \"numero\":\"num\",\"localidad\":\"locali\",\"provincia\":\"santa fe\",\"pais\":\"arg\"},\"fechaAlta\":\"2021-05-01\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/paciente/guardar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJocnl1dHJ1QGVtYWlsLmNvbSIsImV4cCI6MTY3MDc5Mjk5MiwiaWF0IjoxNjcwNzkyMDkyfQ.NVU090O6Kg6TGnyulAXlurF9AORKsy7s3Bqygv4g0WU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/paciente/buscar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente",
+						"buscar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJocnl1dHJ1QGVtYWlsLmNvbSIsImV4cCI6MTY3MDc5NDI3MSwiaWF0IjoxNjcwNzkzMzcxfQ.R7W243t5x6YYqyTZ1QJBXj7DpGt9_aZWjgf6q5QsvCY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Juan\",\r\n    \"apellido\": \"MArta\",\r\n    \"dni\": 435435345,\r\n    \"domicilio\": {\r\n        \"id\": 1,\r\n        \"calle\": \"cal\",\r\n        \"numero\": \"num\",\r\n        \"localidad\": \"locali\",\r\n        \"provincia\": \"santa fe\",\r\n        \"pais\": \"arg\"\r\n    },\r\n    \"fechaAlta\": \"2022-05-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/paciente/actualizar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente",
+						"actualizar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsYXRhX3JwQGdtYWlsLmNvbSIsImV4cCI6MTY3MDgwNTQ2MywiaWF0IjoxNjcwODA0NTYzfQ.YzPuEh-peN8Wh4s8imqIPk15uSHbxUfcLFKy_qoIeEg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/paciente/buscarTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paciente",
+						"buscarTodos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

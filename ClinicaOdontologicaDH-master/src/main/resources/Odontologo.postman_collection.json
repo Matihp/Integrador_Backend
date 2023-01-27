@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "0b317c39-4454-47a9-9281-10c55609babf",
+		"name": "Odontologo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23357079"
+	},
+	"item": [
+		{
+			"name": "Crear",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW1pQGdtYWlsLmNvbSIsImV4cCI6MTY3MDg4OTczMywiaWF0IjoxNjcwODg4ODMzfQ.0-0yggEh0cg2Cpe21TqslQnoeqwHK4b2699Dz3lNxkU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Vale\",\r\n    \"apellido\":\"can\",\r\n    \"matricula\":\"hjghj6n4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/odontologo/guardar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologo",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsYXRhX3JwQGdtYWlsLmNvbSIsImV4cCI6MTY3MDgwMTgwOSwiaWF0IjoxNjcwODAwOTA5fQ.qR9Z7mOUnCwJpYjAFkE9nJdP3r78DasI9iRwrnqMGhE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/odontologo/buscar/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologo",
+						"buscar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW1pQGdtYWlsLmNvbSIsImV4cCI6MTY3MDg4OTczMywiaWF0IjoxNjcwODg4ODMzfQ.0-0yggEh0cg2Cpe21TqslQnoeqwHK4b2699Dz3lNxkU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/odontologo/buscarTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologo",
+						"buscarTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJocnl1dHJ1QGVtYWlsLmNvbSIsImV4cCI6MTY3MDc5NDI3MSwiaWF0IjoxNjcwNzkzMzcxfQ.R7W243t5x6YYqyTZ1QJBXj7DpGt9_aZWjgf6q5QsvCY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Mati\",\r\n    \"apellido\":\"contre\",\r\n    \"matricula\":\"67567657\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/odontologo/actualizar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologo",
+						"actualizar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJocnl1dHJ1QGVtYWlsLmNvbSIsImV4cCI6MTY3MDc5NDI3MSwiaWF0IjoxNjcwNzkzMzcxfQ.R7W243t5x6YYqyTZ1QJBXj7DpGt9_aZWjgf6q5QsvCY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/odontologo/eliminar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologo",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
